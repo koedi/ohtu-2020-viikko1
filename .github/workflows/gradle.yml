@@ -29,4 +29,5 @@ jobs:
       run: bash <(curl -s https://codecov.io/bash)
 
     - name: Checkstyle report
-      run: ./gradlew test 
+      run: ./gradlew checkstyleMain
+       
