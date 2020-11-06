@@ -20,13 +20,6 @@ public class Varasto {
 
     public Varasto(double tilavuus, double alkuSaldo) { // kuormitetaan
 
-	/*
-        if (tilavuus > 0.0) {
-            this.tilavuus = tilavuus;
-        } else { // virheellinen, nollataan        
-            this.tilavuus = 0.0;  // => käyttökelvoton varasto
-        }
-	*/
 	this.tilavuus = Math.max(0.0, tilavuus);
 	
         
@@ -38,13 +31,9 @@ public class Varasto {
             this.saldo = tilavuus;  // täyteen ja ylimäärä hukkaan!
         }
 
-	/*
-	alkuSaldo = Math.max(0.0, alkuSaldo);
-	this.saldo = Math.min(alkuSaldo, tilavuus);
-	*/
-
-
-
+	
+	//this.saldo = Math.min(Math.max(0.0, alkuSaldo), tilavuus);
+	
     }
 
     // --- ottavat aksessorit eli getterit: ---
